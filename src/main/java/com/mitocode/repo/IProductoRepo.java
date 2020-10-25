@@ -1,7 +1,7 @@
 package com.mitocode.repo;
 
-import com.mitocode.model.Persona;
+import com.mitocode.model.Producto;
 
-public interface IProductoRepo extends IGenericRepo<Persona, Integer> {
+public interface IProductoRepo extends IGenericRepo<Producto, Integer> {
 
 }
