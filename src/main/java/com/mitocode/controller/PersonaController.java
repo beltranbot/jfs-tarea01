@@ -2,6 +2,8 @@ package com.mitocode.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,7 +35,7 @@ public class PersonaController {
 	}
 	
 	@PostMapping
-	public Persona registrar(@RequestBody Persona p) {
+	public Persona registrar(@Valid @RequestBody Persona p) {
 		return service.registrar(p);
 	}
 	
