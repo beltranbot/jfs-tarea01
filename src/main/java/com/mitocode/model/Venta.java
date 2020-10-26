@@ -32,13 +32,13 @@ public class Venta {
 	private LocalDateTime fecha; // json ISODate YYYY-MMDDTHH:MM:ss
 
 	@ManyToOne
-	@JoinColumn(name = "id_persona", nullable = false, foreignKey = @ForeignKey(name = "FK_consulta_persona"))
+	@JoinColumn(name = "id_persona", nullable = false, foreignKey = @ForeignKey(name = "venta_persona"))
 	private Persona Persona;
 
 	@JsonIgnore
 	@Column(name = "importe", nullable = false)
 	private Double importe;
-	
+
 	// mappedBy = "venta" refers to DetalleVenta.venta
 	@OneToMany(mappedBy = "venta", cascade = { CascadeType.ALL }, orphanRemoval = true)
 	private List<DetalleVenta> detalleVenta;
