@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "f76baaba-5af9-4c2a-9fe0-4736cbbfe14c",
+		"name": "tarea01",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get Personas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/personas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"personas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post Personas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombres\": \"ca\",\n    \"apellidos\": \"be\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/personas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"personas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Persona by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/personas/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"personas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get util locale",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/utils/locale/es",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"utils",
+						"locale",
+						"es"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post Producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"producto 3\",\n    \"marca\": \"marca 2\",\n    \"precioUnidad\": \"3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/productos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post Venta dto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"venta\": {\n        \"fecha\": \"2020-04-22T05:00:00.000Z\",\n        \"persona\": {\n            \"idPersona\": 100\n        },\n        \"detalleVenta\": [\n            {\n                \"producto\": {\n                    \"idProducto\": 1\n                },\n                \"cantidad\": 1\n            },\n            {\n                \"producto\": {\n                    \"idProducto\": 2\n                },\n                \"cantidad\": 2\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/ventas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ventas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post Venta jpa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"venta\": {\n        \"fecha\": \"2020-04-22T05:00:00.000Z\",\n        \"persona\": {\n            \"idPersona\": 100\n        },\n        \"detalleVenta\": [\n            {\n                \"producto\": {\n                    \"idProducto\": 1\n                },\n                \"cantidad\": 1\n            },\n            {\n                \"producto\": {\n                    \"idProducto\": 2\n                },\n                \"cantidad\": 2\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/ventas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ventas"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
